@@ -27,28 +27,28 @@ export default class WEATHER {
 
     //Get a list of available cities
     async fetchWoeid(arg){
-        
+        try{
             
-            const response = await fetch(`${arg}`, {
-                mode: 'no-cors' // 'cors' by default
-              })
-            const data = await response.json();
+            const response = await fetch(arg)
+            const data = await response.json()
            
             this.fetchWeather(data[0].woeid) //Use the first city on the list
-      
+        }catch(er){
+            console.log(er)
+        }
 
 
     }
 
     //Get weather information for a specific city
     async fetchWeather(arg){
-        
-            const response = await fetch(`https://www.metaweather.com/api/location/${arg}/`, {
-                mode: 'no-cors' // 'cors' by default
-              })
+        try{
+            const response = await fetch(`https://www.metaweather.com/api/location/${arg}/`)
             const data = await response.json()
             this.collectData(data) //Pass data to function for processing
-       
+        }catch(er){
+            console.log(er)
+        }
         
     }
 
