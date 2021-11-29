@@ -48,6 +48,7 @@ export default class WEATHER {
             this.collectData(data) //Pass data to function for processing
         }catch(er){
             console.log(er)
+            
         }
         
     }
