@@ -34,7 +34,7 @@ export default class WEATHER {
            
             this.fetchWeather(data[0].woeid) //Use the first city on the list
         }catch(er){
-            console.log(er)
+            alert(er)
         }
 
 
@@ -47,7 +47,7 @@ export default class WEATHER {
             const data = await response.json()
             this.collectData(data) //Pass data to function for processing
         }catch(er){
-            console.log(er)
+            alert(er)
         }
         
     }
