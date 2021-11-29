@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/devchallenges.png" />
+    <!--javaScript-->
+    <script type="module" src="./js/script.js" defer></script>
+    <!--font awesome-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!--normalize-->
+    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+    <!--Main Style-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Weather app</title>
+  </head>
+  <body>
+    <main class="weather flex">
+      <div class="weather__today">
+        <div class="weather__today-searchNav">
+          <button type="button" class="close-btn">X</button>
+          <form class="search__form flex">
+            <label for="search" style="display: none">
+              Enter your site her</label
+            >
+            <input
+              type="search"
+              name="search"
+              placeholder="search location"
+              class="search__form-input"
+            />
+            <input type="submit" class="search__form-btn" value="search" />
+          </form>
+          <label style="display: none" for="select-site">Choose a site:</label>
+          <select data-country_list="" class="select-site" name="select-site">
+            <option value="Search by name">Search by name</option>
+          </select>
+          <ul class="list-site" data-city_list=""></ul>
+        </div>
+        <div class="weather__today-nav flex">
+          <button class="search-btn">Search for places</button>
+          <button class="location">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#FFFFFF"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="weather__today-img" data-today_img="">
+          <img
+            src="./img/nt+unknown-1326634043843090418_512.png"
+            alt=" unknowe weather"
+          />
+        </div>
+        <h1 class="weather__today-temp" data-today_temp="">- <span>℃</span></h1>
+        <h2 class="weather__today-name" data-today_weather="">Shower</h2>
+        <p class="weather__today-date" data-today_date>
+          Today - <span> - </span>
+        </p>
+
+        <p class="weather__today-location" data-today_title>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            enable-background="new 0 0 24 24"
+            height="20px"
+            viewBox="0 0 24 24"
+            width="20px"
+            fill="#88869D"
+          >
+            <g><path d="M0,0h24v24H0V0z" fill="none" /></g>
+            <g>
+              <path
+                d="M12,2c-4.2,0-8,3.22-8,8.2c0,3.32,2.67,7.25,8,11.8c5.33-4.55,8-8.48,8-11.8C20,5.22,16.2,2,12,2z M12,12c-1.1,0-2-0.9-2-2 c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2C14,11.1,13.1,12,12,12z"
+              />
+            </g>
+          </svg>
+          ???
+        </p>
+      </div>
+      <div class="weather__days">
+        <div class="weather__days-to5 grid">
+          <div class="days-card flex" data-days="">
+            <h3>Tomorrow</h3>
+            <div class="img"><img src="./img/Snow.png" alt="" /></div>
+            <div class="temp flex">
+              <p class="temp__high">16°C</p>
+              <p class="temp__low">11°C</p>
+            </div>
+          </div>
+
+          <div class="days-card flex" data-days="">
+            <h3>Tomorrow</h3>
+            <div class="img"><img src="./img/Snow.png" alt="" /></div>
+            <div class="temp flex">
+              <p class="temp__high">16°C</p>
+              <p class="temp__low">11°C</p>
+            </div>
+          </div>
+
+          <div class="days-card flex" data-days="">
+            <h3>Tomorrow</h3>
+            <div class="img"><img src="./img/Snow.png" alt="" /></div>
+            <div class="temp flex">
+              <p class="temp__high">16°C</p>
+              <p class="temp__low">11°C</p>
+            </div>
+          </div>
+
+          <div class="days-card flex" data-days="">
+            <h3>Tomorrow</h3>
+            <div class="img"><img src="./img/Snow.png" alt="" /></div>
+            <div class="temp flex">
+              <p class="temp__high">16°C</p>
+              <p class="temp__low">11°C</p>
+            </div>
+          </div>
+
+          <div class="days-card flex" data-days="">
+            <h3>Tomorrow</h3>
+            <div class="img"><img src="./img/Snow.png" alt="" /></div>
+            <div class="temp flex">
+              <p class="temp__high">16°C</p>
+              <p class="temp__low">11°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="weather__days-hightlights">
+          <h2>Today’s Hightlights</h2>
+          <div class="weather__days-hightlights__cards grid">
+            <div class="hightlights__cards-card">
+              <p class="title">Wind status</p>
+              <p class="text" data-today_wind="">-<span>mph</span></p>
+              <div class="arrow">
+                <img src="./img/location-arrow-solid.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="hightlights__cards-card">
+              <p class="title">Humidity</p>
+              <p class="text" data-today_humidity="">-<span>%</span></p>
+              <div class="humidity">
+                <div class="humidity__text flex">
+                  <span>0</span>
+                  <span>50</span>
+                  <span>100</span>
+                </div>
+                <div class="humidity__meter"></div>
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="hightlights__cards-card">
+              <p class="title">Visibility</p>
+              <p class="text" data-today_visibility="">-<span> miles</span></p>
+            </div>
+
+            <div class="hightlights__cards-card">
+              <p class="title">Air Pressure</p>
+              <p class="text" data-today_pressure="">-<span> mb</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

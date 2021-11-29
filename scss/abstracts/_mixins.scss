@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+$screen-xs-min: 36rem;
+$screen-sm-min: 48rem;
+$screen-md-min: 62rem;
+$screen-lg-min: 75rem;
+$screen-xl-min: 120rem;
+
+@mixin xs {
+  @media only screen and (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+@mixin sm {
+  @media only screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+@mixin md {
+  @media only screen and (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media only screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media only screen and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

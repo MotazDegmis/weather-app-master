@@ -1,0 +1,13 @@
+@use "./forward" as *;
+.weather {
+  justify-content: center;
+  background-color: var(--clr-bg1);
+  min-height: 100vh;
+  text-align: center;
+  &.flex {
+    flex-direction: column;
+    @include sm {
+      flex-direction: row;
+    }
+  }
+}

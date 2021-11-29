@@ -1,0 +1,67 @@
+@use "../abstracts/forward" as *;
+
+.weather__days {
+  width: 100%;
+  padding: 2em 0;
+  max-width: 981px;
+  &-buttons {
+    display: none;
+    & button {
+      font-size: 1.125em;
+      font-weight: var(--font-w700);
+      color: var(--clr-text1);
+      background-color: var(--clr-bg3);
+      border-radius: 50%;
+      display: block;
+      padding: 0.4em;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      &:hover,
+      &:focus-visible {
+        background-color: var(--clr-btn-active);
+      }
+      &.active {
+        background-color: var(--clr-text1);
+        color: hsla(244, 62%, 15%, 1);
+      }
+    }
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1em;
+      margin-bottom: 3em;
+      margin-right: 4.5em;
+    }
+  }
+  &-to5 {
+    grid-template-columns: repeat(auto-fit, 120px);
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-hightlights {
+    margin-top: 5em;
+    & h2 {
+      font-size: 1.5em;
+      font-weight: var(--font-w700);
+      color: var(--clr-text1);
+      text-align: left;
+      margin-left: 3vw;
+      @include md {
+        margin-left: 7vw;
+      }
+    }
+
+    &__cards {
+      gap: 2em;
+      margin-top: 3em;
+      margin-bottom: 3em;
+      grid-template-columns: repeat(auto-fit, 328px);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@use "../abstracts/forward" as *;
+
+.days-card {
+  --gap: 0em;
+  padding: 1em;
+
+  flex-direction: column;
+
+  background-color: var(--clr-bg2);
+  & h3 {
+    font-size: 1em;
+    font-weight: var(--font-w500);
+    color: var(--clr-text1);
+    margin-bottom: 0.5em;
+  }
+  & .img {
+    max-width: 56.44px;
+    margin: 0 auto;
+  }
+  & .temp {
+    margin-top: 3em;
+    justify-content: space-around;
+    &__high {
+      font-size: 1em;
+      font-weight: var(--font-w500);
+      color: var(--clr-text1);
+    }
+    &__low {
+      font-size: 1em;
+      font-weight: var(--font-w500);
+      color: var(--clr-text2);
+    }
+  }
+}
+
+.hightlights__cards-card {
+  padding: 1.5em;
+  background-color: var(--clr-bg2);
+  & .title {
+    font-size: 1em;
+    font-weight: var(--font-w500);
+    color: var(--clr-text1);
+  }
+  & .text {
+    font-size: 4em;
+    font-weight: var(--font-w700);
+    color: var(--clr-text1);
+    & span {
+      font-size: 0.5625em;
+      font-weight: var(--font-w500);
+    }
+  }
+  & .arrow {
+    --rotate: 0deg;
+    max-width: 30px;
+    aspect-ratio: 1;
+    display: grid;
+    margin: 1em auto;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    border-radius: 50%;
+    padding: 0.4em;
+    transform: rotate(var(--rotate));
+    & img {
+      margin: auto;
+      width: 15px;
+      transform: rotate(315deg);
+    }
+  }
+  & .humidity {
+    max-width: 80%;
+    margin: 0.5em auto 0;
+    &__text {
+      justify-content: space-between;
+      color: var(--clr-text1);
+      font-weight: var(--font-w700);
+    }
+    &__meter {
+      --width: 10%;
+      position: relative;
+      width: 100%;
+      height: 8px;
+      margin: 0.2em 0;
+      background-color: hsla(240, 9%, 91%, 1);
+      border-radius: 1em;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        height: 100%;
+        width: var(--width);
+        border-radius: 1em;
+        background-color: red;
+      }
+    }
+    & > span {
+      display: block;
+      text-align: right;
+      color: var(--clr-text1);
+      font-weight: var(--font-w700);
+    }
+  }
+}
