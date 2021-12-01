@@ -1,5 +1,6 @@
 // weather class To fetch weather information and update the user interface
 
+
 export default class WEATHER {
 
     constructor(location,root){
@@ -29,7 +30,7 @@ export default class WEATHER {
     async fetchWoeid(arg){
         try{
             
-            const response = await fetch(arg)
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/${arg}`)
             const data = await response.json()
            
             this.fetchWeather(data[0].woeid) //Use the first city on the list
@@ -43,12 +44,12 @@ export default class WEATHER {
     //Get weather information for a specific city
     async fetchWeather(arg){
         try{
-            const response = await fetch(`https://www.metaweather.com/api/location/${arg}/`)
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${arg}/`)
             const data = await response.json()
             this.collectData(data) //Pass data to function for processing
         }catch(er){
             console.log(er)
-            
+
         }
         
     }
